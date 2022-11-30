@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ExpenseItem from "./components/ExpenseItem";
+import myImages from "./images/images.js";
 
 function App() {
+  const expense = [
+    { title: "juice", price: 30 },
+    { title: "milk", price: 20 },
+    { title: "water", price: 10 },
+    { title: "beer", price: 50 },
+  ];
+  const size = "64px";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>This is my grocery list</h2>
+      <ExpenseItem
+        title={expense[0].title}
+        image=<img src={myImages[0]} alt="juice" width={size}></img>
+        price={expense[0].price}
+      />
+      <ExpenseItem
+        title={expense[1].title}
+        image=<img src={myImages[1]} alt="milk" width={size}></img>
+        price={expense[1].price}
+      />
+      <ExpenseItem
+        title={expense[2].title}
+        image=<img src={myImages[2]} alt="water" width={size}></img>
+        price={expense[2].price}
+      />
+      <ExpenseItem
+        title={expense[3].title}
+        image=<img src={myImages[3]} alt="beer" width={size}></img>
+        price={expense[3].price}
+      />
     </div>
   );
 }
