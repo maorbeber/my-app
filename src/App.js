@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-      <h2>This is my grocery list</h2>
+      <h2>This is our grocery list</h2>
       <ExpenseItem
         title={expense[0].title}
         image=<img src={myImages[0]} alt="juice" width={size}></img>
